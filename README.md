@@ -7,9 +7,16 @@
 ## 🎯 Project Overview
 
 This project demonstrates a comprehensive web accessibility solution that combines:
+
+https://github.com/user-attachments/assets/225bbb3a-7bc8-4e39-a611-5c974f222900
+
+https://drive.google.com/file/d/10hIx_DYBKHFwx73ubfiUFOxV4r0xuLg5/view?usp=drive_link
+
+
 - **Restaurant Website Demo** - A fully responsive restaurant website with accessibility features
 - **Accessibility Bridge Extension** - A Chrome extension that uses AI to enhance web accessibility
 - **Universal Compatibility** - Works on any website to provide real-time accessibility improvements
+
 
 **🌟 Key Innovation:** Uses Chrome's built-in AI APIs to automatically make any website more accessible!
 
