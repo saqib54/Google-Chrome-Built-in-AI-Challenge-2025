@@ -1,0 +1,356 @@
+/* Accessibility Bridge Extension Styles */
+
+/* Main accessibility panel */
+#accessibility-bridge-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 280px;
+  background: #ffffff;
+  border: 2px solid #0066cc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.ab-panel-header {
+  background: #0066cc;
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px 6px 0 0;
+}
+
+.ab-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.ab-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.ab-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ab-panel-content {
+  padding: 15px;
+}
+
+.ab-auto-features {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #28a745;
+}
+
+.ab-feature-status {
+  text-align: center;
+}
+
+.ab-status-text {
+  font-size: 12px;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.ab-website-info {
+  margin: 12px 0;
+  padding: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.ab-site-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 4px;
+}
+
+.ab-enhancement-count {
+  font-size: 11px;
+  color: #6c757d;
+}
+
+.ab-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ab-btn {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ab-btn:hover {
+  background: #e9ecef;
+  border-color: #0066cc;
+  transform: translateY(-1px);
+}
+
+.ab-btn:active {
+  transform: translateY(0);
+}
+
+.ab-status {
+  text-align: center;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+  border: 1px solid #dee2e6;
+}
+
+/* Accessibility modifications */
+.ab-simplified {
+  background: #fff3cd;
+  padding: 2px 4px;
+  border-radius: 3px;
+  border-left: 3px solid #ffc107;
+}
+
+.ab-translated {
+  background: #d1ecf1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  border-left: 3px solid #17a2b8;
+}
+
+/* Audio summary display */
+.ab-audio-summary {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 90%;
+  background: white;
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+.ab-summary-header {
+  background: #28a745;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px 6px 0 0;
+  font-weight: 600;
+}
+
+.ab-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.ab-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ab-summary-content {
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.ab-summary-actions {
+  padding: 15px 20px;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.ab-summary-actions button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.ab-summary-actions button:hover {
+  background: #218838;
+}
+
+/* High contrast mode */
+body.ab-high-contrast {
+  filter: contrast(150%) !important;
+}
+
+body.ab-high-contrast * {
+  background-color: black !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+body.ab-high-contrast a {
+  color: #ffff00 !important;
+}
+
+body.ab-high-contrast button {
+  background-color: #333 !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+body.ab-high-contrast #accessibility-bridge-panel {
+  background: black !important;
+  border-color: white !important;
+}
+
+body.ab-high-contrast .ab-panel-header {
+  background: #333 !important;
+}
+
+body.ab-high-contrast .ab-btn {
+  background: #333 !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+/* Large text mode */
+body.ab-large-text {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+body.ab-large-text * {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+body.ab-large-text h1 { font-size: 2.2em !important; }
+body.ab-large-text h2 { font-size: 1.8em !important; }
+body.ab-large-text h3 { font-size: 1.5em !important; }
+body.ab-large-text h4 { font-size: 1.3em !important; }
+body.ab-large-text h5 { font-size: 1.1em !important; }
+body.ab-large-text h6 { font-size: 1em !important; }
+
+/* Focus improvements */
+body.ab-large-text *:focus {
+  outline: 3px solid #0066cc !important;
+  outline-offset: 2px !important;
+}
+
+/* Screen reader improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Image accessibility indicators */
+img[data-ab-alt-generated] {
+  border: 2px solid #28a745;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #accessibility-bridge-panel {
+    width: calc(100% - 40px);
+    right: 20px;
+    left: 20px;
+  }
+  
+  .ab-controls {
+    grid-template-columns: 1fr;
+  }
+  
+  .ab-audio-summary {
+    width: calc(100% - 40px);
+    max-width: none;
+  }
+}
+
+/* Animation for smooth interactions */
+.ab-btn, .ab-toggle, .ab-close {
+  transition: all 0.2s ease;
+}
+
+/* Improved button accessibility */
+.ab-btn:focus,
+.ab-toggle:focus,
+.ab-close:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Loading state */
+.ab-btn.loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.ab-btn.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid #ccc;
+  border-top-color: #0066cc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
